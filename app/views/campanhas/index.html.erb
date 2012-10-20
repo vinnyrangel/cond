@@ -1,0 +1,29 @@
+<h1>Listing campanhas</h1>
+
+<table>
+  <tr>
+    <th>Parceiro</th>
+    <th>Tipo</th>
+    <th>ID Peça</th>
+    <th>Ativo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @campanhas.each do |campanha| %>
+  <tr>
+    <td><%= campanha.parceiro.nome %></td>
+    <td><%= campanha.publicidade_tipo %></td>
+    <td><%= campanha.publicidade_id %></td>
+    <td><%= campanha.ativo %></td>
+    <td><%= link_to 'Show', campanha %></td>
+    <td><%= link_to 'Edit', edit_campanha_path(campanha) %></td>
+    <td><%= link_to 'Destroy', campanha, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Campanha', new_campanha_path %>

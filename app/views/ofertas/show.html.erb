@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @oferta.titulo %>
+</p>
+
+<%= image_tag @oferta.foto.url(:medium) %>
+
+<p>
+  <b>Descricao:</b>
+  <%= @oferta.descricao %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @oferta.data %>
+</p>
+
+<p>
+  <b>Preco de:</b>
+  R$<%= @oferta.preco_de %>
+</p>
+
+<p>
+  <b>Preco por:</b>
+  R$<%= @oferta.preco_por %>
+</p>
+
+<p>
+  <b>Parceiro:</b>
+  <%= @oferta.parceiro_id %>
+</p>
+
+<p>
+  <b>Ativo:</b>
+  <%= @oferta.ativo %>
+</p>
+
+
+<%= link_to 'Edit', edit_oferta_path(@oferta) %> |
+<%= link_to 'Back', ofertas_path %>

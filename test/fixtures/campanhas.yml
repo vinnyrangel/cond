@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  parceiro_id: 
+  publicidade_tipo: 
+  publicidade_id: 
+  data_inicio: 
+  data_fim: 
+  pageviews: 
+  clicks: 
+  ativo: false
+
+two:
+  parceiro_id: 
+  publicidade_tipo: 
+  publicidade_id: 
+  data_inicio: 
+  data_fim: 
+  pageviews: 
+  clicks: 
+  ativo: false

@@ -1,0 +1,12 @@
+<h1>Nova página</h1>
+
+<%= simple_form_for(@pagina, :html => { :class => 'form-horizontal'}) do |f| %>
+
+	<%= render :partial => 'form', :locals => {:f => f} %>
+	
+	  <div class="form-actions">
+			<%= link_to 'Cancelar', paginas_path, :class => "btn" %>
+	    <%= f.button :submit, :class => 'btn-primary' %>
+
+	  </div>
+	<% end %>

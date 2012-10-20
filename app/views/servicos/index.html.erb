@@ -1,0 +1,31 @@
+<h1>Listing servicos</h1>
+
+<table>
+  <tr>
+	<th></th>
+    <th>Nome</th>
+    <th>Descrição</th>
+    <th>Endereço</th>
+    <th>Telefone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @servicos.each do |servico| %>
+  <tr>
+	<td><%= image_tag servico.foto.url(:thumb) %></td>
+    <td><%= servico.nome %></td>
+    <td><%= servico.descricao %></td>
+    <td><%= servico.endereco %></td>
+    <td><%= servico.telefone %></td>
+    <td><%= link_to 'Show', servico %></td>
+    <td><%= link_to 'Edit', edit_servico_path(servico) %></td>
+    <td><%= link_to 'Destroy', servico, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Servico', new_servico_path %>

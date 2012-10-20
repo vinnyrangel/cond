@@ -1,0 +1,16 @@
+<%= simple_form_for(@campanha) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :parceiro, :label => "Selecione o parceiro", :prompt => "Nenhum parceiro selecionado",  :label_method => :nome %>
+    <%= f.input :publicidade_tipo, :collection => ["Oferta", "Banner", "Serviço"] %>
+    <%= f.input :publicidade_id, :label => "Peça" %>
+    <%= f.input :data_inicio %>
+    <%= f.input :data_fim %>
+    <%= f.input :ativo %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,20 @@
+<%
+# valor default de algumas variáveis
+botao_editar ||= false
+comentarios ||= false
+%>
+<div class="span4 mural">
+	<cite>
+		<%= link_to mural.titulo, url_for(mural) %> <%= "(#{mural.comments.length})" if mural.comentavel %>
+	</cite>
+	<p class="corpo">
+		<%= mural.corpo %>
+	</p>
+	<address>Enviando por <strong><%= mural.usuario.apresentacao.html_safe %></strong></address>
+	<p><%= if botao_editar and can? :edit, mural
+		link_to 'Edit', edit_mural_path(mural) 
+	end %></p>
+	
+	<%= comments_for mural if comentarios and mural.comentavel %>
+	
+</div>

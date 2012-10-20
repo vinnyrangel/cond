@@ -1,0 +1,66 @@
+<h2>Oi <%= current_usuario.nome %>!</h2>
+
+<style>
+table { width: 500px;}
+td { padding: 5px;}
+</style>
+
+
+<hr/>
+
+<h3>Informações</h3>
+<table>
+	<tr>
+		<td>Condominio</td>
+		<td><%= nome_condominio %></td>
+	</tr>
+	<tr>
+		<td><%= link_to "Prédios", predios_admin_index_path %></td>
+		<td><%= total_predios %></td>
+	</tr>
+	<tr>
+		<td><%= link_to "Moradores", moradores_admin_index_path %></td>
+		<td><%= total_moradores %></td>
+	</tr>
+	<tr>
+		<td>Chamados</td>
+		<td><%= total_chamados_abertos %></td>
+	</tr>
+</table>
+
+
+<hr/>
+<h3>Moradores</h3>
+<ul>
+	<li><%= link_to "Enviar mensagem para moradores", enviar_mensagem_admin_index_path %></li>
+	<li><%= link_to "Convidar novos moradores", convidar_admin_index_path %></li>
+</ul>
+<hr/>
+
+<h3>Conteúdo</h3>
+<ul>
+	<li>Páginas</li>
+	<li>Mural</li>
+</ul>
+<hr/>
+
+<!-- @TODO: acertar as chamadas dos links usando helpers -->
+<% if current_usuario.admin? %>
+<h3>Publicidade</h3>
+<ul>
+	<li><a href="/admin/ofertas" title="Ofertas">Ofertas</a></li>
+	<li><a href="/admin/banners" title="Banners">Banners</a></li>
+	<li><a href="/admin/servicos" title="Serviços">Serviços</a></li>
+	<li><a href="/admin/parceiros" title="Parceiros">Parceiros</a></li>
+	<li><a href="/admin/campanhas" title="Campanhas">Campanhas</a></li>
+</ul>
+<hr/>
+<% end %>
+
+
+<h3>Configurações</h3>
+<ul>
+	<li>Privacidade</li>
+</ul>
+
+<hr/>

@@ -1,0 +1,12 @@
+<h1>HOME</h1>
+
+<h2>Veja os condominios já disponíveis</h2>
+<ul>
+<% @condominios.each do |condominio| %>
+    <li><%= link_to condominio.nome, condominio %></li>
+<% end %>
+<div>
+</div>
+
+
+

@@ -1,0 +1,28 @@
+<h1>Páginas</h1>
+
+<div class="span6">
+<table class="table table-striped">
+	<thead>
+	  <tr>
+	    <th>Titulo</th>
+	    <th>No índice?</th>
+	    <th>Ativa?</th>
+	  </tr>
+	</thead>
+
+	<tbody>
+	<% @paginas.each do |pagina| %>
+	  <tr>
+	    <td><%= link_to pagina.titulo, pagina %><%= link_to '', edit_pagina_path(pagina), :class => "icon-edit" if can? :edit, pagina %></td>
+	    <td><%= pagina.chamada ? "Sim" : "Não" %></td>
+	    <td><%= pagina.ativo ? "Sim" : "Não" %></td>
+	  </tr>
+	<% end %>
+	</tbody>
+</table>
+
+<br />
+
+<%= link_to 'Criar nova página', new_pagina_path %>
+
+</div>

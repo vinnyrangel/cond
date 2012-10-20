@@ -1,0 +1,9 @@
+<h1>Condominios</h1>
+
+<ul>
+<% @condominios.each do |condominio| %>
+  <li><%= link_to condominio.nome, condominio %></li>
+<% end %>
+</ul>
+
+<br />

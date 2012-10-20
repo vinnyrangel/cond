@@ -1,0 +1,16 @@
+<ul class="nav nav-list">
+  <%- @agendas.each do |agenda| -%>
+    <li class="nav-header"><%= agenda.nome %></li>
+    <% agenda.eventos.each do |evento| %>
+      <li><%= format_agenda(evento.dia) %> - <%= evento.titulo %></li>
+    <% end %>
+
+    <% if meu_condominio == @condominio %>
+      <li><%= link_to 'criar novo evento', new_condominio_agenda_evento_path(:condominio_id => params[:id], 
+                                            :agenda_id => agenda.slug), :class => 'btn' %></li>
+    <% end %>
+    <li class="divider"></li>
+ <% end %>
+</ul>
+
+<%= link_to "Agenda", condominio_agendas_path(:condominio_id => @condominio.slug), :class => "btn" %>

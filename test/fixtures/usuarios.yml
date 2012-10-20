@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: José
+  senha: bacon
+  foto: 
+  telefone: 222222222
+  data_nascimento: 11/01/2011
+  tamanho_familia: 2
+  tipo: morador

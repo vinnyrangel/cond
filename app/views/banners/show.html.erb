@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Url:</b>
+  <%= @banner.url %>
+</p>
+
+<p>
+  <b>Path:</b>
+  <%= @banner.path %>
+</p>
+
+<%= image_tag @banner.imagem.url(:small) %>
+
+<p>
+  <b>Parceiro:</b>
+  <%= @banner.parceiro.nome %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @banner.data %>
+</p>
+
+<p>
+  <b>Ativo:</b>
+  <%= @banner.ativo %>
+</p>
+
+
+<%= link_to 'Edit', edit_banner_path(@banner) %> |
+<%= link_to 'Back', banners_path %>

@@ -1,0 +1,11 @@
+<%= render 'avisos' unless @aviso.nil? %>
+
+<div class="row-fluid">
+  <%= render "oferta_do_dia" unless @oferta.nil? %>
+
+  <%= render "murais" unless @murais.nil? %>
+
+  <div class="span4 offset8">
+    <%= render 'agendas' %>
+  </div>
+</div>

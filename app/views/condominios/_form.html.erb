@@ -1,0 +1,29 @@
+<%= simple_form_for @condominio, :html => { :multipart => true } do |f| %>
+
+  <fieldset>
+    <legend>Informações Gerais</legend>
+    <%= f.input :nome, :label => 'nome' %>
+    <%= f.file_field :logo, :label => 'Foto' %>
+  </fieldset>
+
+  <fieldset>
+    <legend>Localização</legend>
+    <%= f.input :endereco, :placeholder => 'Rua muppets, 17' %>
+    <%= f.input :lon, :label => 'Longitude' %>
+    <%= f.input :lat, :label => 'Latitude' %>
+  </fieldset>
+
+  <fieldset>
+    <legend>Privacidade</legend>
+    <%= check_box_tag(:privado) %>
+    <%= label_tag(:privado, "Apenas moradores podem ver informações do condominio") %>
+
+    <%= check_box_tag(:moderar) %>
+    <%= label_tag(:moderar, "Para ser morador do condominio, deverá ser aceito por um síndico") %>
+
+    <%= check_box_tag(:moderar) %>
+    <%= label_tag(:moderar, "Lista de moradores só será visivel por outros moradores já aprovados no condominio") %>
+  </fieldset>
+  
+  <%= f.button :submit %>
+<% end %>

@@ -1,0 +1,5 @@
+<h2>Enviar mensagem</h2>
+
+<b>Moradores de quais prédios receberão essa mensagem?</b>
+
+<%= Predio.find_all_by_condominio_id(current_usuario.apartamento.predio.condominio.id) %>

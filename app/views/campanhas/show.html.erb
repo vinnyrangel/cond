@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Parceiro:</b>
+  <%= @campanha.parceiro.nome %>
+</p>
+
+<p>
+  <b>Publicidade tipo:</b>
+  <%= @campanha.publicidade_tipo %>
+</p>
+
+<p>
+  <b>Publicidade:</b>
+  <%= @campanha.publicidade_id %>
+</p>
+
+<p>
+  <b>Data inicio:</b>
+  <%= @campanha.data_inicio %>
+</p>
+
+<p>
+  <b>Data fim:</b>
+  <%= @campanha.data_fim %>
+</p>
+
+<p>
+  <b>Pageviews:</b>
+  <%= @campanha.pageviews %>
+</p>
+
+<p>
+  <b>Clicks:</b>
+  <%= @campanha.clicks %>
+</p>
+
+<p>
+  <b>Ativo:</b>
+  <%= @campanha.ativo %>
+</p>
+
+
+<%= link_to 'Edit', edit_campanha_path(@campanha) %> |
+<%= link_to 'Back', campanhas_path %>

@@ -1,0 +1,135 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+body {
+  background-color: #c3bab5 !important;
+  padding: 20px 0; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+
+.container-fluid {
+  background: #fff;
+  border: 1px solid #989898;  
+  padding: 0 0 20px;  
+  margin:70px 20px 20px;
+}
+
+.container-fluid .top {
+  background: #e5e5e5;
+  height: 40px;
+  position: relative;
+  top:-41px; 
+  border-radius: 7px 7px 0 0
+}
+
+.container-fluid .logo {
+  margin: 0 0 20px 0;
+}
+
+.container-fluid .logo img {
+  border: 1px solid #fff;
+}
+
+.container-fluid .top .ltop {
+  float: left;
+  border-right: 1px solid #989898;
+}
+
+
+.container-fluid .top .top .right {
+  text-align: right;
+}
+
+.container-fluid .top .ltop span {
+  display: block;
+  float: left;
+  line-height: 40px;
+  padding: 0 20px;
+  border-bottom: 1px solid #989898;
+  border-right: 1px solid #989898;
+}
+
+.container-fluid .top .ltop span.condominio {
+  color: #73a6d5;
+  background: #fff;
+  border: 1px solid #fff;
+  height:39px;
+}
+
+.container-fluid .top .rtop {
+  text-align: right;
+  float: right;
+  width: 500px;
+  line-height: 40px;
+  margin-right: 5px;  
+}
+
+.container-fluid .top .rtop {
+  border-bottom: 1px solid #989898;
+}
+
+.container-fluid .top .rtop span {
+  color: #d55053;
+}
+
+.logo {margin:10px 0 0 0;}
+
+/*
+
+a:visited { color: #fff;}
+
+#comments {
+	list-style: none;
+}
+
+#comments li {
+	margin-bottom: 15px;
+	border-bottom: 1px solid #999;
+}
+
+#comments p {
+	margin: 0;
+}
+
+#comments .author {
+	font-size: 80%;
+	color: #999;
+	display: block;
+}
+
+.container-fluid {
+  background: #fff;
+  border: 1px solid #989898;
+  margin: 0 auto;
+  width: 957px;
+  margin-top: 50px;
+  padding: 0px !important;
+}
+
+.span10 { 
+  border-left: 1px solid #cccccc;
+  margin-bottom: 10px;
+}
+
+.span2 a { 
+  color: #d55053;
+}
+
+.nav-list {
+  padding-bottom: 30px;
+}
+*/
+
+
+/* HOME - Oferta do dia */
+#oferta-do-dia {margin:0 0 20px; padding:20px;}
+#oferta-do-dia .titulo {}
+#oferta-do-dia .titulo-oferta {}
+#oferta-do-dia img {}	
+#oferta-do-dia .descricao {font-size:12px;}
+#oferta-do-dia .preco {}
+#oferta-do-dia .preco .preco-de {text-decoration:line-through;}
+#oferta-do-dia .preco .preco-por {font-size:16px;}

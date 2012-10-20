@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  titulo: MyString
+  descricao: MyText
+  data: 2012-03-17 01:14:59
+  preco_de: 
+  preco_por: 
+  parceiro_id: 1
+  ativo: false
+
+two:
+  titulo: MyString
+  descricao: MyText
+  data: 2012-03-17 01:14:59
+  preco_de: 
+  preco_por: 
+  parceiro_id: 1
+  ativo: false

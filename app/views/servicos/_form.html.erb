@@ -1,0 +1,22 @@
+<%= simple_form_for @servico, :html => { :class => 'form-horizontal'} do |f| %>
+
+  <fieldset>
+    <legend>Informações Gerais</legend>
+    <%= f.input :nome, :label => 'Nome' %>
+	<%= f.file_field :foto, :label => 'Logo' %>
+	<%= f.association :tipo_servicos, :as => :check_boxes, :label => "Tipo de Serviço", :label_method => :nome  %>
+    <%= f.input :descricao, :label => 'Descrição' %>
+	<%= f.input :endereco, :label => 'Endereço' %>
+	<%= f.input :telefone, :label => 'Telefone' %>
+  </fieldset>
+  
+  <%= f.button :submit %>
+<% end %>
+
+
+<!--
+	< % @tipoServicos.each do |tipos| %>
+		< %= check_box_tag 'servico[tipo_servicos_id]', tipos.id %>
+		< %= h tipos.tipo_nome %>
+	< % end %>
+-->

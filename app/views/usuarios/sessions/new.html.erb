@@ -1,0 +1,27 @@
+
+<div class="span6">
+<h2>Sign in</h2>
+
+<%= form_for(resource, :as => resource_name, :class => "well", :url => session_path(resource_name)) do |f| %>
+  
+  <%= f.email_field :email, :class => "input-medium", :placeholder => "Email" %>
+  <%= f.password_field :password, :class => "input-medium", :placeholder => "Senha" %>
+
+<% if devise_mapping.rememberable? -%>
+    <label class="checkbox">
+      <input type="checkbox"> Remember me
+    </label>  
+  <% end -%>
+
+  <br/>
+  <%= f.submit "Sign in", :class => "btn btn-success" %>
+
+  
+
+<% end %>
+
+<%= render "links" %>
+
+</div>
+
+  

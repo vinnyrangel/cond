@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @servico.foto.url(:medium) %>
+
+<p>
+	<b>Nome:</b>
+	<%= @servico.nome %>
+</p>
+
+<p>
+  	<b>Tipo de Serviço:</b>
+	<ul>
+  	<% @tipoServico.each do |tipo| %>
+		<li><%= tipo.nome %></li> 
+	<% end %>
+	</ul>
+</p>
+
+<p>
+	<b>Descricao:</b>
+	<%= @servico.descricao %>
+</p>
+
+<p>
+	<b>Endereco:</b>
+	<%= @servico.endereco %>
+</p>
+
+<p>
+	<b>Telefone:</b>
+	<%= @servico.telefone %>
+</p>
+
+
+<%= link_to 'Edit', edit_servico_path(@servico) %> |
+<%= link_to 'Back', servicos_path %>

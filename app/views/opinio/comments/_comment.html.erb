@@ -1,0 +1,15 @@
+<% reply = defined?(reply) ? reply : false %>
+<li id="comment_<%= comment.id %>">
+  <p>
+    <%= comment.body %>
+  </p>
+  <span class="author"><%= comment.owner.apresentacao %></span>
+  <%= link_to '', comment_path(comment), :class => 'icon-remove', :method => :delete, :remote => true %>
+  <%# this enables only 1 level of replies %>
+  <% if Opinio.accept_replies && !reply %>
+    <span><%= link_to '', reply_comment_path(comment), :class => 'icon-share-alt', :remote => true %></span>
+    <ul id="comment_<%= comment.id %>_replies" class="replies">
+      <%= render :partial => "opinio/comments/comment", :collection => comment.comments, :locals => {:reply => true} %>
+    </ul>
+  <% end %>
+</li>

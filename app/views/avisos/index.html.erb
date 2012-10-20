@@ -1,0 +1,20 @@
+<h2>Avisos</h2>
+
+<%= link_to 'Criar novo aviso', new_condominio_aviso_path(:condominio_id => params[:condominio_id]),
+    :class => "btn btn-primary" %>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Conteúdo</th>
+    <th></th>
+  </tr>
+
+<% @avisos.each do |aviso| %>
+  <tr>
+    <td><%= aviso.id %></td>
+    <td><%= aviso.corpo %></td>
+    <td><%= link_to 'Excluir', condominio_aviso_path(:condominio_id => params[:condominio_id], :id => aviso.id), confirm: 'Excluir?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>

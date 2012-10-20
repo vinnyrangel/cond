@@ -1,0 +1,15 @@
+<h2>Prédios do Condominio</h2>
+
+
+<br/><br/><br/>
+
+<% @predios.each do |x| %>
+<p>
+	Nome: <b><%= x.nome %></b><br/>
+	Sindico: <b><%= Usuario.find_by_id(x.sindico_id).nome %></b><br/>
+	Telefone: <b><%= x.telefone %></b><br/>
+	Email: <b><%= Usuario.find_by_id(x.sindico_id).email %></b><br/>
+	<hr/>
+</p>
+
+<% end %>

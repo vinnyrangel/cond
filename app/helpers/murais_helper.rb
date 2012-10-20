@@ -1,0 +1,2 @@
+module MuraisHelper
+end

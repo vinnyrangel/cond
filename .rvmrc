@@ -1,0 +1,6 @@
+rvm ruby-1.9.3@cond
+
+command -v bundle > /dev/null 2>&1
+if [ ! $? ]; then
+  gem install bundler
+fi

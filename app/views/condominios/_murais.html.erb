@@ -1,0 +1,13 @@
+<div class="span8 listagem-mural">
+    <h3>Mural</h3>
+    <%= link_to "nova mensagem", new_mural_path, :class => "btn", :id => "btn-novo-mural" %>
+  <div class="box-novo-mural">
+    <%= render :partial =>"murais/form" %>
+  </div>
+    
+    <% if not @murais.empty? or can? :create, @Mural %>
+      <% @murais.each do |mural| %>
+        <%= render mural %>
+        <% end %>
+    <% end %>
+  </div>

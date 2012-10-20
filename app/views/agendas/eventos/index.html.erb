@@ -1,0 +1,27 @@
+<h1>Eventos na agenda</h1>
+<p>Essa página consta uma listagem dos próximos eventos que estão cadastrados
+  na agenda</p>
+
+
+<table class="table table-bordered">
+   <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Descrição</th>
+      <th>Status</th>
+      <th>Data</th>
+      <th>Responsável</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @eventos.each do |e| %>
+    <tr>
+      <td><%= e.titulo %></td>
+      <td><%= e.descricao %></td>
+      <td><%= evento_status(e.status) %></td>
+      <td><%= evento_data(e.dia) %></td>
+      <td><%= evento_usuario(e.usuario_id) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

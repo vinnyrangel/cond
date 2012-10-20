@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.nome %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @user.data_nascimento %>
+</p>
+
+<p>
+  <b>Family:</b>
+  <%= @user.tamanho_familia %>
+</p>
+
+<%#= image_tag @user.avatar.url %>
+<%#= image_tag @user.avatar.url(:thumb) %>
+
+
+<%= link_to 'Edit', edit_usuario_path(@user) %> |
+<%= link_to 'Back', usuarios_path %>

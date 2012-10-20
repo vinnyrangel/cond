@@ -1,0 +1,34 @@
+
+.listagem-mural h3 {
+    font-size: 16px;
+    font-style: italic;
+    padding-left: 20px;
+}
+
+.mural cite {
+    font-weight: bold;
+}
+
+.mural p.corpo {
+    
+}
+
+.mural address {
+    font-style: italic;
+}
+
+.mural {
+    border-bottom: 1px dotted #CCC;
+    margin-bottom: 5px;
+}
+
+.box-novo-mural {
+    display: none;
+    border: 1px solid black;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.box-novo-mural textarea {
+    height: 3em;
+}

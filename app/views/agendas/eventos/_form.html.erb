@@ -1,0 +1,8 @@
+<%= simple_form_for([@condominio, @agenda, @evento]) do |f| %>
+
+  <%= f.input :titulo, :label => "Nome do evento" %>
+  <%= f.input :descricao, :label => "Descrição (opcional)", :input_html => { :cols => 50, :rows => 5 } %>
+  <%= f.input :dia, :as => :date, :start_year => Date.today.year, :end_year => Date.today.year + 1 %>
+
+  <%= f.button :submit %>
+<% end %>

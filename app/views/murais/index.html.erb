@@ -1,0 +1,31 @@
+<h1>Listing murais</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Mensagem</th>
+    <th>Autor</th>
+    <th>Comentarios</th>
+    <th>Pai</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @murais.each do |mural| %>
+  <tr>
+    <td><%= mural.titulo %></td>
+    <td><%= mural.corpo %></td>
+    <td><%= mural.usuario.apresentacao %></td>
+    <td><%= mural.comentarios %></td>
+    <td><%= mural.parent %></td>
+    <td><%= link_to 'Show', mural %></td>
+    <td><%= link_to 'Edit', edit_mural_path(@condominio, mural) %></td>
+    <td><%= link_to 'Destroy', mural, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mural', new_mural_path %>

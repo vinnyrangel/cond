@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @parceiro.nome %>
+</p>
+
+<p>
+  <b>Endereco:</b>
+  <%= @parceiro.endereco %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @parceiro.email %>
+</p>
+
+<p>
+  <b>Telefone:</b>
+  <%= @parceiro.telefone %>
+</p>
+
+
+<%= link_to 'Edit', edit_parceiro_path(@parceiro) %> |
+<%= link_to 'Back', parceiros_path %>

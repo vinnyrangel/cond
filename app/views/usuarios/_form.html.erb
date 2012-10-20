@@ -1,0 +1,21 @@
+<%= simple_form_for @user, :html => { :multipart => true } do |f| %>
+
+  <fieldset>
+    <legend>Dados básicos</legend>
+    <%= f.input :nome, :label => 'Nome' %>
+    <%= f.input :email, :placeholder => 'caco@muppets.com' %>
+    <%= f.input :password, :label => 'Senha' %>
+    <%= f.input :password_confirmation, :label => 'Repetir a senha' %>
+    <%= f.input :telefone, :label => 'Telefone', :as => :tel %>
+    <%= f.input :data_nascimento, :label => 'Data de nascimento' %>
+    <%= f.input :tamanho_familia, :label => 'Tamanho da familia', :collection => 1..10 %>
+    <%= f.collection_radio_buttons :tipo_usuario_id, TipoUsuario.all, :id, :nome %>
+  </fieldset>
+
+  <fieldset>
+    <legend>Foto</legend>
+    <%= f.file_field :avatar, :label => 'Foto' %>
+  </fieldset>
+  
+  <%= f.button :submit %>
+<% end %>

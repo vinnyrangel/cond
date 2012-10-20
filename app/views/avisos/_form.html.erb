@@ -1,0 +1,13 @@
+<%= simple_form_for([meu_condominio, @aviso], :class => "well") do |f| %>
+
+  <%= f.input :corpo, :class => 'textarea', :input_html => { :cols => 50, :rows => 10 } %>
+  <%= f.input :condominio_id, :as => :hidden, :input_html => { :value => meu_condominio.id } %>
+  
+  <!-- 
+  <label class="checkbox">
+    <input type="checkbox"> Notificar moradores por email
+  </label>  
+  -->
+
+  <%= f.button :submit %>
+<% end %>

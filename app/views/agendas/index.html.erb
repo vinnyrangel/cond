@@ -1,0 +1,21 @@
+<h1>Agendas</h1>
+
+
+<%= link_to 'Criar nova agenda', new_condominio_agenda_path(:condominio_id => params[:condominio_id]),
+    :class => "btn btn-primary" %>
+
+<table>
+  <tr>
+    <th>Nome da agenda</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @agendas.each do |agenda| %>
+  <tr>
+    <td><%= agenda.nome %></td>
+    <td><%= link_to 'Eventos', condominio_agenda_eventos_path(:agenda_id => agenda, :condominio_id => params[:condominio_id]) %></td>
+    <td><%= link_to 'Renomear', edit_condominio_agenda_path(agenda, :condominio_id => params[:condominio_id]) %></td>
+  </tr>
+<% end %>
+</table>

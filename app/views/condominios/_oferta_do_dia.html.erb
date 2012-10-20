@@ -1,0 +1,7 @@
+<div id="oferta-do-dia" class="span8">
+    <h2 class="titulo">OFERTA DO DIA</h2>
+    <h3 class="titulo-oferta"><%= @oferta.titulo %></h3>
+    <%= image_tag @oferta.foto.url(:medium) %>  
+    <p class="descricao"><%= @oferta.descricao %></p>
+    <p class="preco">De <span class="preco-de">R$<%= @oferta.preco_de %></span> por <span class="preco-por">R$<%= @oferta.preco_por %></span>
+  </div>

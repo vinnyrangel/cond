@@ -1,0 +1,17 @@
+<div id="new_comment">
+  <% if send(Opinio.current_user_method) %>
+    <h3>Novo comentário</h3>
+    <%= form_for Comment.new, :remote => true do |f| %>
+      <p>
+        <%= f.text_area :body, :id => "Comment", :rows => 2 %>
+      </p>
+      <%= hidden_field_tag :commentable_id, commentable.id %>
+      <%= hidden_field_tag :commentable_type, commentable.class.base_class.name.to_s %>
+      <%= f.submit "Enviar comentário", :class => "btn btn-primary" %>
+    <% end %>
+  <% else %>
+    <p>
+      Você precisa estar logado para comentar.
+    </p>
+  <% end %>
+</div>

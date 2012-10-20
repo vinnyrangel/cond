@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  titulo: MyString
+  mensagem: MyText
+  autor_id: 1
+  comentarios: false
+  pai: 1
+
+two:
+  titulo: MyString
+  mensagem: MyText
+  autor_id: 1
+  comentarios: false
+  pai: 1
